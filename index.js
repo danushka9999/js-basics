@@ -129,8 +129,18 @@
             }
         };
     }
-    const Circle = createCircle(5);
-    Circle.draw();
+    const ccircle = createCircle(5);
+    ccircle.draw();
+
+//Constructor Fuction
+    function Circle(radius){
+        this.radius = radius;
+        this.draw = function(){
+            console.log('Draw');
+        }
+    }
+    const another = new Circle(1);
+    console.log(another.draw());
 
 
     
