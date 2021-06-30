@@ -159,4 +159,16 @@
 //Values/Pirimitives vs Reference types
     //Pirimitives are copied by their value
     //Objects are copied by their references
-    
+
+//Adding or removing properties
+    //objects are dynamic
+    //Dot notation to add property
+    another.location = {x:1};
+    //Bracket notation to add property
+    const propetyName = 'location';
+    another['propetyName'] = {x : 1};
+
+    //Dot Notaion to remove property
+    delete another.location;
+    //Bracket Notaion to remove property
+    delete another['location'];
