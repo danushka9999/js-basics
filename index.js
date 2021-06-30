@@ -38,4 +38,9 @@ console.log(isApproved);
 console.log(firstname);
 console.log(selectColor);
 
+//Dynamic Typing
+//can use 'typeof' to check its pirimitive type
+//undefined is also a value and a type
+
+
 
