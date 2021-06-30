@@ -88,3 +88,35 @@
     }
     let number = square(2);
     console.log(number);
+
+
+//OOP IN JS
+    //Encapsulation - Reduce complexity + increase reusability
+    //Abstraction   - Reduce complexity + isolate impact of changes
+    //Inheritance   - Eliminate redundant code
+    //Polymorphism  - Refactor ugly switch/case statements
+
+//Object Literal
+    //Object in js is a collection of key/value pairs
+    //value can be a object, function, array
+    //{}; <----- Object literal syntax
+
+    const circle = {
+        radius : 1,
+        location : {
+            x : 1,
+            y : 1
+        },
+        draw : function(){
+            console.log('draw');
+        }
+    };
+    //This circle object has 3 members
+    //if a member is a function, we refer it as method
+    //other two members are propertys
+    circle.draw();
+    //Object literal is the simple way to define an object
+
+    
+
+    
