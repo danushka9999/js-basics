@@ -120,7 +120,7 @@
 //Factories
     //If a object has one or more method we call that object has bechaviour. so if an object has atleast one fuction then its not suit to go on object literal
     //Threfore use factory and constructor method
-    //factory function
+//factory function
     function createCircle(radius){
         return{
             radius, //In ES6 we have this feature, If the key and value are the same we can remove the value and  keep key (radius : radius) ---> radius
@@ -143,4 +143,9 @@
     console.log(another.draw());
 
 
-    
+//Constructor property
+   //Every object in js has a property called constructor. Amd that refernces to the function that we used to create object
+   //another.constructor 
+   //ccircle.constructor
+
+
