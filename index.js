@@ -1,6 +1,7 @@
 //this is my first java script code
 console.log('Hello  World');
 
+//variables
 let name = 'Danushka';
 console.log(name);
 
@@ -15,3 +16,8 @@ let firstName = 'Danushka';
 let lastName = 'Ranasinghe';
 console.log(firstName);
 console.log(lastName);
+
+//constants
+const interestRate = 0.3;
+interestRate = 1;
+console.log(interestRate);
