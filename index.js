@@ -25,6 +25,7 @@
     //String
     //Number
     //Boolean
+    //Symbol(Introduced in ES6)
     //Undefined 
     //Null
     let name = 'Danauhska'; //String literal
@@ -154,5 +155,8 @@
     //JS engine use a fuction to create function object
     Circle.call({} , 1); //this equals to line 142 statement
     Circle.apply({} , [1,2,3]) //above we pass the arguments explicitly now we pass arguments as arrays
-    
+
+//Values/Pirimitives vs Reference types
+    //Pirimitives are copied by their value
+    //Objects are copied by their references
     
