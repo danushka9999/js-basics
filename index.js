@@ -55,8 +55,24 @@
         Age: 21
     };
     //Dot Notation(to access property)
+    //Mostly use dot notation
     person.fname = 'Malinga';
     console.log(person.fname);
 
+    //Bracket Notation(to access property)
+    //When we dont know the target property we use this(It is goint to select by user)
+    person['Age'] = 22;
+    console.log(person.Age);
+
     console.log(person);
+
+//Array
+    let selectColors = ['Red' , 'Blue']; //Array Literal
+    selectColors[2] = 'green'
+    console.log(selectColors);
+    console.log(selectColors[0]);
+    console.log(selectColors.length);
+
+
+
 
