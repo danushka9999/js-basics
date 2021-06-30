@@ -73,6 +73,18 @@
     console.log(selectColors[0]);
     console.log(selectColors.length);
 
+//Functions
+    //Performing a task
+    function greet(name , lname) {
+        console.log('Hello ' + name + ' ' + lname);
+    }
+    greet('Danushka' , 'Ranasinghe');//Danushka is an argument | name is a parameter
+    greet('John' , 'Mayor');
 
-
-
+//Types of functions
+    //Calculate a value
+    function square(number){
+        return number*number;
+    }
+    let number = square(2);
+    console.log(number);
