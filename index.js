@@ -172,3 +172,30 @@
     delete another.location;
     //Bracket Notaion to remove property
     delete another['location'];
+
+//Enumerating properties
+    const circle1 = new Circle(10);
+
+    for (let key in circle1){
+        console.log(key);
+        console.log('Hello');
+    }
+    //to get values of these members use bracket notation
+    for (let key in circle1){
+        console.log(key, circle[key]);
+        console.log('Chao');
+    }
+    //To only get properties not the methods
+    for (let key in circle1){
+        if (typeof circle1[key] !== 'function'){
+            console.log(key, circle[key]);
+            console.log('Ayubowan');
+        }
+    }
+    //this will return all the keys in a array
+    const keys = Object.keys(circle1);
+    console.log(keys);
+     
+    //Check for exixsting member(property or method)
+    if('radius' in circle1)
+        console.log('Circle has a radius');
