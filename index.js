@@ -199,3 +199,20 @@
     //Check for exixsting member(property or method)
     if('radius' in circle1)
         console.log('Circle has a radius');
+
+
+//Abstraction(Hide the details Expose the essentials)
+//If need to keep it as private remove this and put let
+function Circle1(radius){
+    this.radius = radius;
+    let defaultLocation = {x: 0,y :0};
+    let computeOptimumLocation = function(factory){
+        console.log(factory);
+    }
+    this.draw = function(){
+        computeOptimumLocation(25);
+        console.log('Draw');
+    }
+}
+const another1 = new Circle1(10);
+another1.draw();
