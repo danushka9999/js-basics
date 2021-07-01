@@ -203,16 +203,39 @@
 
 //Abstraction(Hide the details Expose the essentials)
 //If need to keep it as private remove this and put let
-function Circle1(radius){
-    this.radius = radius;
-    let defaultLocation = {x: 0,y :0};
-    let computeOptimumLocation = function(factory){
-        console.log(factory);
+    function Circle1(radius){
+        this.radius = radius;
+        let defaultLocation = {x: 0,y :0};
+        let computeOptimumLocation = function(factory){
+            console.log(factory);
+        }
+        this.draw = function(){
+            computeOptimumLocation(25);
+            console.log('Draw');
+        }
     }
-    this.draw = function(){
-        computeOptimumLocation(25);
-        console.log('Draw');
+    const another1 = new Circle1(10);
+    another1.draw();
+
+//Getters/Setters
+    function Circle2(radius){
+        this.radius = radius;
+        let defaultLocation = {x: 0,y :0};
+        this.draw = function(){
+            console.log('Draw');
+        }
+        Object.defineProperty(this, 'defaultLocation', {
+            get: function(){
+                return defaultLocation;
+            },
+            set: function(value) {
+                if(!value.x || !value.y)
+                    throw new Error('Invalid Location. ');
+                defaultLocation = value;    
+            }
+
+        });
     }
-}
-const another1 = new Circle1(10);
-another1.draw();
+    const another2 = new Circle2(10);
+    another2.defaultLocation = 0;
+    another2.draw();
