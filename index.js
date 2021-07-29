@@ -142,7 +142,35 @@
     }
     const another = new Circle(1);
     
+//We can assign methods to an object by defining properties that are functions:
+const arto = {
+    name: 'Arto Hellas',
+    age: 35,
+    education: 'PhD',
+    greet: function() {
+    console.log('hello, my name is ' + this.name)
+    },
+}
 
+arto.greet()  // "hello, my name is Arto Hellas" gets printed
+
+//Methods can be assigned to objects even after the creation of the object:
+const arto = {
+    name: 'Arto Hellas',
+    age: 35,
+    education: 'PhD',
+    greet: function() {
+    console.log('hello, my name is ' + this.name)
+    },
+}
+
+arto.growOlder = function() {
+    this.age += 1
+}
+
+console.log(arto.age)   // 35 is printed
+arto.growOlder()
+console.log(arto.age)   // 36 is printed
     
 
 
@@ -274,4 +302,72 @@
         
     }
     const sw = new Stopwatch();
+
+
+//ES6
+    //Let/Const
+    //Objects
+    //this
+    //Arrow Functions
+    //Destructing
+    //Spread
+    //Classes
+    //Modules
+  
+//arrays
+const t = [1, -1, 3]
+
+t.push(5)
+
+console.log(t.length) // 4 is printed
+console.log(t[1])     // -1 is printed
+
+t.forEach(value => {
+console.log(value)  // numbers 1, -1, 3, 5 are printed, each to own line
+})  
+
+
+// concat, which does not add the item to the array, but creates a new array in which the content of the old array and the new item are both included.
+const t = [1, -1, 3]
+
+const t2 = t.concat(5)
+
+console.log(t)  // [1, -1, 3] is printed
+console.log(t2) // [1, -1, 3, 5] is printed
+
+
+//Based on the old array, map creates a new array, for which the function given as a parameter is used to create the items. In the case of this example the original value is multiplied by two.
+const t = [1, 2, 3]
+
+const m1 = t.map(value => value * 2)
+console.log(m1)   // [2, 4, 6] is printed
+
+const m2 = t.map(value => '<li>' + value + '</li>')
+console.log(m2)  
+// [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ] is printed
+
+//Individual items of an array are easy to assign to variables with the help of the destructuring assignment.
+const t = [1, 2, 3, 4, 5]
+
+const [first, second, ...rest] = t
+
+console.log(first, second)  // 1, 2 is printed
+console.log(rest)          // [3, 4 ,5] is printed
+
+//Clases
+class Person {
+constructor(name, age) {
+  this.name = name
+  this.age = age
+}
+greet() {
+  console.log('hello, my name is ' + this.name)
+}
+}
+
+const adam = new Person('Adam Ondra', 35)
+adam.greet()
+
+const janja = new Person('Janja Garnbret', 22)
+janja.greet()
 
